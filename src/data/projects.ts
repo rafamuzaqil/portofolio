@@ -16,71 +16,58 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "1",
-    slug: "nexus-rebrand",
-    title: "Nexus Rebrand",
-    category: "Identitas Merek",
-    client: "Nexus Tech",
-    year: "2025",
-    role: "Desainer Utama",
-    description: "Perombakan menyeluruh identitas merek Nexus, membawa pendekatan editorial modern ke strategi komunikasi inti mereka.",
-    challenge: "Nexus telah berkembang melampaui estetika start-up mereka tetapi kesulitan untuk beresonansi dengan klien perusahaan tanpa kehilangan keunggulan inovatif mereka.",
-    solution: "Kami mendefinisikan ulang bahasa visual mereka menggunakan tipografi tebal, palet monokromatik yang disempurnakan, dan elemen 3D dinamis yang mengkomunikasikan stabilitas dan pemikiran berwawasan ke depan.",
-    thumbnail: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1200",
-    gallery: [
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1600",
-      "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1600",
-      "https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1600"
-    ]
+    slug: "idul-fitri",
+    title: "Idul Fitri",
+    category: "Social Media Campaign",
+    client: "Internal Project",
+    year: "2024",
+    role: "Desainer Grafis",
+    description: "Desain visual feed sosial media bertemakan Hari Raya Idul Fitri dengan gaya modern ringan namun tetap menjaga nuansa tradisional dan religius yang mendalam.",
+    challenge: "Menghadirkan visual perayaan Idul Fitri yang out-of-the-box agar tidak monoton dengan ornamen klise, melainkan pendekatan kontemporer yang relevan dengan audiens muda.",
+    solution: "Menggabungkan tipografi ekspresif dan tata letak perpaduan warna hangat yang bersih guna membangkitkan dan menonjolkan semangat kebersamaan Hari Kemenangan.",
+    thumbnail: "/feed.jpg",
+    gallery: ["/feed.jpg"]
   },
   {
     id: "2",
-    slug: "aurora-editorial",
-    title: "Aurora",
-    category: "Desain Editorial",
-    client: "Aurora Magazine",
-    year: "2024",
-    role: "Pengarah Seni",
-    description: "Desain editorial eksperimental yang mengeksplorasi titik temu antara brutalisme dan tipografi Swiss minimalis.",
-    challenge: "Menciptakan pengalaman membaca yang terasa kacau namun terstruktur, mencerminkan konten avant-garde majalah tersebut.",
-    solution: "Menggunakan sistem grid dasar yang kaku dipadukan dengan pelanggaran aturan yang disengaja—teks yang tumpang tindih dengan gambar dan ketebalan font variabel yang dilebih-lebihkan.",
-    thumbnail: "https://images.unsplash.com/photo-1544473244-f6895e69ce8d?q=80&w=1200",
-    gallery: [
-      "https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?q=80&w=1600",
-      "https://images.unsplash.com/photo-1532056079965-037089408d6d?q=80&w=1600"
-    ]
+    slug: "liquid-effect",
+    title: "Liquid Effect",
+    category: "Eksperimen Visual 3D",
+    client: "Personal Exploration",
+    year: "2025",
+    role: "Visual Artist",
+    description: "Eksplorasi visual menggunakan efek cairan (liquid) yang dinamis, menunjukkan perpaduan antara tipografi, warna, dan distorsi efek visual untuk menciptakan komposisi yang mengalir.",
+    challenge: "Membuat teks dan bentuk visual terlihat melebur sedemikian rupa menjadi bentuk cair yang realistis serta dinamis, tetapi pesan utamanya dan tulisan harus tetap terbaca jelas.",
+    solution: "Penerapan pemrosesan distorsi perpindahan gambar berlapis yang sangat dipertimbangkan (displacement map halus) untuk mencapai proporsi keseimbangan fungsi keterbacaan serta bentuk abstrak yang mengagumkan.",
+    thumbnail: "/liquid-effect.jpg",
+    gallery: ["/liquid-effect.jpg"]
   },
   {
     id: "3",
-    slug: "kinetic-exhibition",
-    title: "Kinetic Space",
-    category: "Grafis Lingkungan",
-    client: "Museum of Modern Art",
-    year: "2024",
-    role: "Komunikator Visual",
-    description: "Desain tata ruang dan tipografi untuk pameran seni kinetik interaktif.",
-    challenge: "Memandu pengunjung melalui ruang non-linear yang kompleks tanpa papan penunjuk jalan tradisional.",
-    solution: "Menggunakan proyeksi tipografi masif yang bereaksi terhadap pergerakan pengunjung, bertindak sebagai instalasi seni sekaligus panduan arah.",
-    thumbnail: "https://images.unsplash.com/photo-1545989253-02cc26577f88?q=80&w=1200",
-    gallery: [
-      "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1600",
-      "https://images.unsplash.com/photo-1507643179227-1521bd9db49a?q=80&w=1600"
-    ]
+    slug: "personal-branding",
+    title: "Personal Branding",
+    category: "Identitas Merek",
+    client: "Rafa",
+    year: "2026",
+    role: "Desainer Utama",
+    description: "Konsep dasar dan eksplorasi personal branding untuk desainer yang menonjolkan profesionalisme murni, tingkat keberanian yang tinggi dalam bereksperimen, namun tetap dalam ranah minimalisme utuh.",
+    challenge: "Menyatukan semua ciri khas gaya desain yang beragam ke ranah UI/UX, Editorial, hingga arah seni (Art Direction) agar berada di bawah satu payung identitas visual besar yang mencerminkan sang pembuatnya.",
+    solution: "Menerapkan pendekatan metodis berbasis tipografi kustom dipadukan dengan tata letak geometris presisi yang serba dinamis dan tebal, yang secara konsisten kuat diaplikasikan dari platform skala kecil hingga super besar.",
+    thumbnail: "/personal-branding.jpg",
+    gallery: ["/personal-branding.jpg"]
   },
   {
     id: "4",
-    slug: "vibe-app",
-    title: "Vibe Interface",
-    category: "Desain UI/UX",
-    client: "Vibe Audio",
-    year: "2026",
-    role: "Desainer Produk",
-    description: "Aplikasi seluler khusus mode gelap untuk para audiophile murni yang mencari gangguan minimal.",
-    challenge: "Memasukkan kontrol equalizer yang kuat ke dalam layar kecil dengan tetap mempertahankan kesan bersih dan premium.",
-    solution: "Memperkenalkan kontrol berbasis gerakan di atas antarmuka gelap kontras tinggi yang disederhanakan yang menampilkan elemen glassmorphism.",
-    thumbnail: "https://images.unsplash.com/photo-1616423640778-28d1b53229bd?q=80&w=1200",
-    gallery: [
-      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1600",
-      "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1600"
-    ]
+    slug: "brutalism",
+    title: "Brutalism",
+    category: "Desain Kontras",
+    client: "Art Exhibition",
+    year: "2025",
+    role: "Pengarah Seni",
+    description: "Eksplorasi berani pada gaya desain brutalisme yang mengabaikan semua aturan normal pembatasan grid konvensional dan tren estetika web modern minimalis.",
+    challenge: "Menyusun kekacauan desain yang tidak memiliki harmoni namun tidak sampai mengasingkan maupun menghilangkan makna utama informasi di dalamnya.",
+    solution: "Eksperimentasi tabrakan asimetri ekstrem dengan palet warna mentah dan raksasa. Menghindari penghalus piksel modern guna menyajikan sebuah karya estetika jujur yang secara sengaja memberontak.",
+    thumbnail: "/brutalism.jpg",
+    gallery: ["/brutalism.jpg"]
   }
 ]

@@ -7,12 +7,12 @@ export interface ProjectCardProps {
   slug: string
   title: string
   category: string
-  image: string
+  thumbnail: string
   index: number
   className?: string
 }
 
-export const ProjectCard = ({ id, slug, title, category, image, index, className }: ProjectCardProps) => {
+export const ProjectCard = ({ id, slug, title, category, thumbnail, index, className }: ProjectCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -24,7 +24,7 @@ export const ProjectCard = ({ id, slug, title, category, image, index, className
       <Link to={`/project/${slug}`} className="block h-full w-full">
         <div className="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden">
           <motion.img
-            src={image}
+            src={thumbnail}
             alt={title}
             className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105 group-hover:blur-[2px]"
           />

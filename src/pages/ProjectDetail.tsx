@@ -1,21 +1,11 @@
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useParams, Link } from 'react-router-dom'
 import { projects } from '../data/projects'
 import { ArrowLeft } from 'lucide-react'
-import { useRef } from 'react'
 
 export default function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>()
   const project = projects.find(p => p.slug === slug)
-
-  const containerRef = useRef(null)
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"]
-  })
-
-  const heroY = useTransform(scrollYProgress, [0, 0.5], [0, 200])
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0])
 
   if (!project) return <div className="min-h-screen flex items-center justify-center text-white">Project not found</div>
 
@@ -26,7 +16,6 @@ export default function ProjectDetail() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
       className="bg-[#0a0a0a] text-white min-h-screen"
-      ref={containerRef}
     >
       <div className="fixed top-24 left-6 md:left-12 z-50">
         <Link to="/" className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest hover:text-accent transition-colors mix-blend-difference">
@@ -34,27 +23,22 @@ export default function ProjectDetail() {
         </Link>
       </div>
 
-      {/* Hero Banner */}
-      <section className="relative h-[80vh] overflow-hidden">
-        <motion.div style={{ y: heroY, opacity: heroOpacity }} className="absolute inset-0">
-          <img src={project.thumbnail} alt={project.title} className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/50" />
-        </motion.div>
-
-        <div className="absolute inset-0 flex flex-col justify-end px-6 md:px-12 pb-24 z-10">
+      {/* Hero Header */}
+      <section className="relative pt-48 md:pt-64 pb-12 md:pb-24 px-6 md:px-12 bg-[#0a0a0a]">
+        <div className="max-w-6xl mx-auto">
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="text-accent font-bold tracking-widest uppercase mb-4"
+            transition={{ delay: 0.2 }}
+            className="text-accent text-sm font-bold tracking-widest uppercase mb-4"
           >
             {project.category}
           </motion.p>
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-6xl md:text-[8vw] leading-none font-black uppercase tracking-tighter"
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="text-6xl md:text-[8vw] leading-[0.9] font-black uppercase tracking-tighter"
           >
             {project.title}
           </motion.h1>
@@ -103,7 +87,7 @@ export default function ProjectDetail() {
           </div>
 
           {/* Gallery */}
-          <div className="space-y-12 md:space-y-24">
+          <div className="space-y-12 md:space-y-24 flex flex-col items-center">
             {project.gallery.map((img, i) => (
               <motion.div
                 key={i}
@@ -111,9 +95,9 @@ export default function ProjectDetail() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-10%" }}
                 transition={{ duration: 1 }}
-                className="w-full overflow-hidden rounded-xl"
+                className="w-full max-w-5xl overflow-hidden rounded-2xl bg-[#141414] border border-white/5 relative flex items-center justify-center p-4 md:p-12 shadow-2xl shadow-black/50"
               >
-                <img src={img} alt={`${project.title} gallery ${i + 1}`} className="w-full h-auto object-cover" />
+                <img src={img} alt={`${project.title} gallery ${i + 1}`} className="w-full max-h-[75vh] object-contain rounded-lg" />
               </motion.div>
             ))}
           </div>

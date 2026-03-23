@@ -40,8 +40,8 @@ export const Navbar = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
-          <Link to="/" className="text-2xl font-black tracking-tighter uppercase z-50 mix-blend-difference">
-            Rafa<span className="text-accent">.</span>
+          <Link to="/" className="z-50">
+            <img src="/logo.png" alt="Logo" className="h-[22px] md:h-7 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity" />
           </Link>
 
           {/* Desktop Nav */}
