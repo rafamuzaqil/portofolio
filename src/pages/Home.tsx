@@ -128,16 +128,16 @@ export default function Home() {
       </section>
 
       {/* 4. Contact / CTA */}
-      <section id="contact" className="py-40 px-6 md:px-12 bg-accent text-dark relative overflow-hidden">
+      <section id="contact" className="py-24 md:py-40 px-6 md:px-12 bg-accent text-dark relative overflow-hidden">
         <div className="container mx-auto flex flex-col items-center justify-center text-center relative z-10">
           <motion.h2
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-6xl md:text-[10vw] leading-[0.9] font-black uppercase tracking-tighter mb-12"
+            className="text-[12vw] md:text-[10vw] leading-[0.9] font-black uppercase tracking-tighter mb-8 md:mb-12"
           >
-            Mari <br /> Berkolaborasi!
+            Hubungi <br /> saya
           </motion.h2>
 
           <form
@@ -148,22 +148,23 @@ export default function Home() {
               const body = encodeURIComponent(`Nama: ${formData.get('nama')}\nEmail: ${formData.get('email')}\n\nPesan:\n${formData.get('pesan')}`);
               window.location.href = `mailto:muzaqilrafa@gmail.com?subject=${subject}&body=${body}`;
             }}
-            className="w-full max-w-2xl bg-dark/5 backdrop-blur-sm p-8 rounded-3xl mb-12"
+            className="w-full max-w-2xl bg-dark/5 backdrop-blur-sm p-6 md:p-8 rounded-3xl mb-12 border border-dark/10"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <input type="text" name="nama" required placeholder="NAMA" className="w-full border-b-2 border-dark/20 bg-transparent py-4 text-dark placeholder:text-dark/40 font-bold uppercase focus:outline-none focus:border-dark transition-colors" />
-              <input type="email" name="email" required placeholder="EMAIL" className="w-full border-b-2 border-dark/20 bg-transparent py-4 text-dark placeholder:text-dark/40 font-bold uppercase focus:outline-none focus:border-dark transition-colors" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
+              <input type="text" name="nama" required placeholder="NAMA" className="w-full border-b-2 border-dark/20 bg-transparent py-3 md:py-4 text-dark placeholder:text-dark/40 font-bold uppercase focus:outline-none focus:border-dark transition-colors" />
+              <input type="email" name="email" required placeholder="EMAIL" className="w-full border-b-2 border-dark/20 bg-transparent py-3 md:py-4 text-dark placeholder:text-dark/40 font-bold uppercase focus:outline-none focus:border-dark transition-colors" />
             </div>
-            <textarea name="pesan" required placeholder="DETAIL PROYEK" rows={4} className="w-full border-b-2 border-dark/20 bg-transparent py-4 text-dark placeholder:text-dark/40 font-bold uppercase focus:outline-none focus:border-dark transition-colors mb-8 resize-none" />
+            <textarea name="pesan" required placeholder="DETAIL PROYEK" rows={4} className="w-full border-b-2 border-dark/20 bg-transparent py-3 md:py-4 text-dark placeholder:text-dark/40 font-bold uppercase focus:outline-none focus:border-dark transition-colors mb-6 md:mb-8 resize-none" />
 
-            <button type="submit" className="group flex items-center justify-center gap-4 bg-dark text-white px-10 py-5 rounded-full font-bold uppercase tracking-widest w-full hover:bg-dark/80 transition-colors">
+            <button type="submit" className="group flex items-center justify-center gap-4 bg-dark text-white px-8 py-4 md:px-10 md:py-5 rounded-full font-bold uppercase tracking-widest w-full hover:bg-dark/80 transition-colors">
               Kirim Pesan
               <ArrowRight className="group-hover:translate-x-2 transition-transform" />
             </button>
           </form>
 
-          <a href="mailto:muzaqilrafa@gmail.com" className="inline-flex items-center gap-2 font-bold text-xl uppercase tracking-widest hover:underline decoration-2 underline-offset-8">
-            muzaqilrafa@gmail.com          </a>
+          <a href="mailto:muzaqilrafa@gmail.com" className="inline-flex items-center gap-2 font-bold text-sm md:text-xl uppercase tracking-widest hover:underline decoration-2 underline-offset-8 break-all">
+            muzaqilrafa@gmail.com
+          </a>
         </div>
       </section>
     </motion.div>
