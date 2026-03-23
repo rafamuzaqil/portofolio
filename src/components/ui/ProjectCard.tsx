@@ -12,7 +12,7 @@ export interface ProjectCardProps {
   className?: string
 }
 
-export const ProjectCard = ({ id, slug, title, category, thumbnail, index, className }: ProjectCardProps) => {
+export const ProjectCard = ({ slug, title, category, thumbnail, index, className }: ProjectCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}

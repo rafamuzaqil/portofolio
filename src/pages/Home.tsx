@@ -4,7 +4,7 @@ import { AnimatedText } from '../components/ui/AnimatedText'
 import { MagneticButton } from '../components/ui/MagneticButton'
 import { ProjectCard } from '../components/ui/ProjectCard'
 import { projects } from '../data/projects'
-import { ArrowRight, Mail } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 export default function Home() {
   const containerRef = useRef(null)

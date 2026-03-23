@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion'
-import { useRef } from 'react'
-
 interface AnimatedTextProps {
   text: string
   el?: keyof JSX.IntrinsicElements
