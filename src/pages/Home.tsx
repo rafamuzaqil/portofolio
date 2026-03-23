@@ -27,31 +27,25 @@ export default function Home() {
       className="bg-dark text-white relative"
     >
       {/* 1. Hero Section */}
-      <section className="relative h-screen flex flex-col justify-center px-6 md:px-12 overflow-hidden">
+      <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 pt-32 pb-12 overflow-hidden">
         <motion.div style={{ y: heroY, opacity: heroOpacity }} className="z-10 relative">
-          <p className="text-accent tracking-[0.3em] font-bold text-sm uppercase mb-6 ml-2">Desainer Komunikasi Visual</p>
-          <AnimatedText 
-            text="Merancang" 
-            el="h1" 
-            className="text-[12vw] leading-[0.85] font-black uppercase tracking-tighter"
+          <p className="text-accent tracking-[0.3em] font-bold text-xs md:text-sm uppercase mb-4 md:mb-6 ml-2">Desainer Komunikasi Visual</p>
+          <AnimatedText
+            text="CRAFTING VISUALS"
+            el="h1"
+            className="text-[13vw] md:text-[8vw] leading-[0.9] font-black uppercase tracking-tighter"
           />
-          <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-12 pl-2 md:pl-0">
-            <AnimatedText 
-              text="Narasi" 
-              el="h1" 
-              className="text-[12vw] leading-[0.85] font-black uppercase tracking-tighter italic text-transparent bg-clip-text"
-              once={true}
-            />
-            <p className="max-w-xs text-white/60 font-medium text-sm md:text-base mt-4 md:mt-0">
-              Mengubah narasi kompleks menjadi sistem visual yang mencolok, reduksionis, dan bertahan lama.
+          <AnimatedText
+            text="FOR THE FUTURE."
+            el="h1"
+            className="text-[13vw] md:text-[8vw] leading-[0.9] font-black uppercase tracking-tighter italic text-transparent bg-clip-text bg-gradient-to-r from-white to-white/40"
+          />
+          <div className="mt-8 md:mt-12 md:pl-2">
+            <p className="max-w-xl text-white/70 font-medium text-sm md:text-xl leading-relaxed">
+              Mengubah ide menjadi sistem visual yang jelas, berani, dan relevan. Fokus pada branding, layout, dan digital design yang tidak hanya terlihat baik—tetapi bekerja.
             </p>
           </div>
-          <AnimatedText 
-            text="Masa Depan." 
-            el="h1" 
-            className="text-[12vw] leading-[0.85] font-black uppercase tracking-tighter"
-          />
-          
+
           <div className="mt-16 ml-2">
             <MagneticButton onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}>
               Lihat Karya Pilihan
@@ -75,24 +69,21 @@ export default function Home() {
                 transition={{ duration: 1, ease: 'easeOut' }}
                 className="aspect-[4/5] w-full max-w-md mx-auto relative group overflow-hidden"
               >
-                <img 
-                  src="/profile.jpg" 
-                  alt="Potret" 
+                <img
+                  src="/profile.jpg"
+                  alt="Potret"
                   className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
               </motion.div>
             </div>
             <div className="md:col-span-7 flex flex-col justify-center">
               <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 bg-gradient-to-br from-white to-white/30 bg-clip-text text-transparent">
-                Membentuk yang tak terlihat menjadi tak terbantahkan.
-              </h2>
+                Membentuk yang sederhana menjadi bermakna.              </h2>
               <div className="space-y-6 text-xl text-white/70 font-light leading-relaxed mb-12 max-w-3xl">
                 <p>
-                  Spesialisasi dalam identitas merek yang mengakar, tata letak editorial, dan antarmuka digital resolusi tinggi. Filosofi saya berpusat pada pengurangan: menghilangkan hal-hal yang tidak perlu hingga hanya esensi komunikasi yang tersisa.
-                </p>
+                  Saya Rafa Muzaqil Mauludin, siswa SMK kelas 12 jurusan Desain Komunikasi Visual (DKV) yang berfokus pada pembuatan identitas visual dan desain digital. Saya tertarik pada branding, tata letak, serta bagaimana sebuah desain dapat menyampaikan pesan secara sederhana namun kuat.                </p>
                 <p>
-                  Telah berkolaborasi dengan merek global, museum, dan startup avant-garde, membangun jembatan antara keindahan estetika yang tegas dan logika fungsional.
-                </p>
+                  Saya percaya desain yang baik adalah tentang menyederhanakan—menghilangkan hal yang tidak perlu hingga tersisa inti komunikasi. Saat ini saya terus mengembangkan kemampuan dan terbuka untuk pengalaman serta kolaborasi yang dapat memperluas perspektif dan kualitas karya saya.                </p>
               </div>
 
               <div className="flex flex-wrap gap-4">
@@ -119,7 +110,7 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="flex justify-between items-end mb-16 md:mb-24">
             <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter">
-              Arsip <br/><span className="text-white/30">Pilihan</span>
+              Arsip <br /><span className="text-white/30">Pilihan</span>
             </h2>
             <p className="hidden md:block max-w-xs text-sm text-white/50 text-right">
               Koleksi terkurasi dari karya komisi terbaru yang mengeksplorasi bentuk, fungsi, dan narasi visual. [2024-2026]
@@ -139,32 +130,40 @@ export default function Home() {
       {/* 4. Contact / CTA */}
       <section id="contact" className="py-40 px-6 md:px-12 bg-accent text-dark relative overflow-hidden">
         <div className="container mx-auto flex flex-col items-center justify-center text-center relative z-10">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-6xl md:text-[10vw] leading-[0.9] font-black uppercase tracking-tighter mb-12"
           >
-            Mari Kita <br/> Wujudkan
+            Mari <br /> Berkolaborasi!
           </motion.h2>
 
-          <form className="w-full max-w-2xl bg-dark/5 backdrop-blur-sm p-8 rounded-3xl mb-12">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              const formData = new FormData(e.currentTarget);
+              const subject = encodeURIComponent("Pesan Baru dari Portofolio Rafa");
+              const body = encodeURIComponent(`Nama: ${formData.get('nama')}\nEmail: ${formData.get('email')}\n\nPesan:\n${formData.get('pesan')}`);
+              window.location.href = `mailto:muzaqilrafa@gmail.com?subject=${subject}&body=${body}`;
+            }}
+            className="w-full max-w-2xl bg-dark/5 backdrop-blur-sm p-8 rounded-3xl mb-12"
+          >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <input type="text" placeholder="NAMA" className="w-full border-b-2 border-dark/20 bg-transparent py-4 text-dark placeholder:text-dark/40 font-bold uppercase focus:outline-none focus:border-dark transition-colors" />
-              <input type="email" placeholder="EMAIL" className="w-full border-b-2 border-dark/20 bg-transparent py-4 text-dark placeholder:text-dark/40 font-bold uppercase focus:outline-none focus:border-dark transition-colors" />
+              <input type="text" name="nama" required placeholder="NAMA" className="w-full border-b-2 border-dark/20 bg-transparent py-4 text-dark placeholder:text-dark/40 font-bold uppercase focus:outline-none focus:border-dark transition-colors" />
+              <input type="email" name="email" required placeholder="EMAIL" className="w-full border-b-2 border-dark/20 bg-transparent py-4 text-dark placeholder:text-dark/40 font-bold uppercase focus:outline-none focus:border-dark transition-colors" />
             </div>
-            <textarea placeholder="DETAIL PROYEK" rows={4} className="w-full border-b-2 border-dark/20 bg-transparent py-4 text-dark placeholder:text-dark/40 font-bold uppercase focus:outline-none focus:border-dark transition-colors mb-8 resize-none" />
-            
-            <button type="button" className="group flex items-center justify-center gap-4 bg-dark text-white px-10 py-5 rounded-full font-bold uppercase tracking-widest w-full hover:bg-dark/80 transition-colors">
+            <textarea name="pesan" required placeholder="DETAIL PROYEK" rows={4} className="w-full border-b-2 border-dark/20 bg-transparent py-4 text-dark placeholder:text-dark/40 font-bold uppercase focus:outline-none focus:border-dark transition-colors mb-8 resize-none" />
+
+            <button type="submit" className="group flex items-center justify-center gap-4 bg-dark text-white px-10 py-5 rounded-full font-bold uppercase tracking-widest w-full hover:bg-dark/80 transition-colors">
               Kirim Pesan
               <ArrowRight className="group-hover:translate-x-2 transition-transform" />
             </button>
           </form>
 
-          <a href="mailto:hello@rafa.design" className="inline-flex items-center gap-2 font-bold text-xl uppercase tracking-widest hover:underline decoration-2 underline-offset-8">
-            <Mail /> hello@rafa.design
-          </a>
+          <a href="mailto:muzaqilrafa@gmail.com" className="inline-flex items-center gap-2 font-bold text-xl uppercase tracking-widest hover:underline decoration-2 underline-offset-8">
+            muzaqilrafa@gmail.com          </a>
         </div>
       </section>
     </motion.div>
