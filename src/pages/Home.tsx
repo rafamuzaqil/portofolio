@@ -69,16 +69,23 @@ export default function Home() {
                 transition={{ duration: 1, ease: 'easeOut' }}
                 className="aspect-[4/5] w-full max-w-md mx-auto relative group overflow-hidden"
               >
-                <img
+                <motion.img
                   src="/profile.jpg"
                   alt="Potret"
-                  className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-[120%] -mt-[10%] object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700 origin-center"
+                  style={{ y: useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]) }}
                 />
               </motion.div>
             </div>
             <div className="md:col-span-7 flex flex-col justify-center">
-              <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 bg-gradient-to-br from-white to-white/30 bg-clip-text text-transparent">
-                Membentuk yang sederhana menjadi bermakna.              </h2>
+              <motion.h2 
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
+                className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 bg-gradient-to-br from-white to-white/30 bg-clip-text text-transparent"
+              >
+                Membentuk yang sederhana menjadi bermakna.              </motion.h2>
               <div className="space-y-6 text-xl text-white/70 font-light leading-relaxed mb-12 max-w-3xl">
                 <p>
                   Saya Rafa Muzaqil Mauludin, siswa SMK kelas 12 jurusan Desain Komunikasi Visual (DKV) yang berfokus pada pembuatan identitas visual dan desain digital. Saya tertarik pada branding, tata letak, serta bagaimana sebuah desain dapat menyampaikan pesan secara sederhana namun kuat.                </p>
@@ -109,9 +116,15 @@ export default function Home() {
       <section id="work" className="py-32 px-6 md:px-12 bg-[#141414] relative z-20">
         <div className="container mx-auto">
           <div className="flex justify-between items-end mb-16 md:mb-24">
-            <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter">
+            <motion.h2 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
+              className="text-5xl md:text-8xl font-black uppercase tracking-tighter"
+            >
               Arsip <br /><span className="text-white/30">Pilihan</span>
-            </h2>
+            </motion.h2>
             <p className="hidden md:block max-w-xs text-sm text-white/50 text-right">
               Koleksi terkurasi dari karya komisi terbaru yang mengeksplorasi bentuk, fungsi, dan narasi visual. [2024-2026]
             </p>
@@ -131,10 +144,10 @@ export default function Home() {
       <section id="contact" className="py-24 md:py-40 px-6 md:px-12 bg-accent text-dark relative overflow-hidden">
         <div className="container mx-auto flex flex-col items-center justify-center text-center relative z-10">
           <motion.h2
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, scale: 0.5, rotate: -5 }}
+            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1, type: "spring", bounce: 0.5 }}
             className="text-[12vw] md:text-[10vw] leading-[0.9] font-black uppercase tracking-tighter mb-8 md:mb-12"
           >
             Hubungi <br /> saya

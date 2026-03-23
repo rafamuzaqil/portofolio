@@ -13,6 +13,9 @@ export const SmoothScroll = ({ children }: { children: React.ReactNode }) => {
       touchMultiplier: 2,
     })
 
+    // Expose lenis to window for programmatic scrolling
+    ;(window as any).lenis = lenis
+
     function raf(time: number) {
       lenis.raf(time)
       requestAnimationFrame(raf)
@@ -22,6 +25,7 @@ export const SmoothScroll = ({ children }: { children: React.ReactNode }) => {
 
     return () => {
       lenis.destroy()
+      ;(window as any).lenis = undefined
     }
   }, [])
 

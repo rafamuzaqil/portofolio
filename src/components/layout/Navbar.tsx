@@ -24,9 +24,30 @@ export const Navbar = () => {
   const navLinks = [
     { name: 'Karya', href: '/#work' },
     { name: 'Tentang', href: '/#about' },
-    { name: 'Layanan', href: '/#services' },
     { name: 'Kontak', href: '/#contact' },
   ]
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('/#')) {
+      const id = href.replace('/#', '');
+      if (location.pathname === '/') {
+        const element = document.getElementById(id);
+        if (element) {
+          e.preventDefault();
+          setIsMobileMenuOpen(false);
+          
+          if (typeof window !== 'undefined' && (window as any).lenis) {
+            (window as any).lenis.scrollTo(element, { offset: 0, duration: 1.5, easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -12 * t)) });
+          } else {
+            const y = element.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        }
+      } else {
+        setIsMobileMenuOpen(false);
+      }
+    }
+  };
 
   return (
     <>
@@ -50,6 +71,7 @@ export const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="text-sm font-medium hover:text-accent transition-colors duration-300 relative group"
               >
                 {link.name}
@@ -82,6 +104,7 @@ export const Navbar = () => {
               <motion.a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="text-4xl font-black uppercase tracking-widest hover:text-accent transition-colors"
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
