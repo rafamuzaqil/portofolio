@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" id="favicon" href="/logo.png" />
+  <script>
+    const img = new Image();
+    img.src = '/logo.png';
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = 128;
+      canvas.height = 128;
+      const ctx = canvas.getContext('2d');
+      const scale = 110 / Math.max(img.width, img.height);
+      const w = img.width * scale;
+      const h = img.height * scale;
+      ctx.drawImage(img, (128 - w) / 2, (128 - h) / 2, w, h);
+      ctx.globalCompositeOperation = 'source-in';
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, 128, 128);
+      document.getElementById('favicon').href = canvas.toDataURL('image/png');
+    };
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Rafa</title>
+  <!-- Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-rm9UPoI5.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-AeOlH0h3.css">
+</head>
+
+<body class="bg-[#0f0f0f] text-white">
+  <div id="root"></div>
+</body>
+
+</html>

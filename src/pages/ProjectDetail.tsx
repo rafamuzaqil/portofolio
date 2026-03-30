@@ -88,6 +88,42 @@ export default function ProjectDetail() {
 
           {/* Gallery */}
           <div className="space-y-12 md:space-y-24 flex flex-col items-center">
+            {project.videoEmbedUrl && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 1 }}
+                className="w-full max-w-5xl overflow-hidden rounded-2xl bg-[#141414] border border-white/5 relative p-4 md:p-8 shadow-2xl shadow-black/50"
+              >
+                <div className="relative w-full pb-[56.25%] rounded-lg overflow-hidden">
+                  <iframe
+                    src={project.videoEmbedUrl}
+                    title={`${project.title} video`}
+                    className="absolute inset-0 w-full h-full"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
+                </div>
+                {project.videoWatchUrl && (
+                  <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
+                    <p className="text-sm text-white/60">
+                      Jika player masih menampilkan status processing, buka langsung di YouTube.
+                    </p>
+                    <a
+                      href={project.videoWatchUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center rounded-full border border-white/30 px-5 py-2 text-xs font-bold uppercase tracking-widest hover:border-accent hover:text-accent transition-colors"
+                    >
+                      Buka di YouTube
+                    </a>
+                  </div>
+                )}
+              </motion.div>
+            )}
             {project.gallery.map((img, i) => (
               <motion.div
                 key={i}

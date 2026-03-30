@@ -11,6 +11,8 @@ export interface Project {
   solution: string
   thumbnail: string
   gallery: string[]
+  videoEmbedUrl?: string
+  videoWatchUrl?: string
 }
 
 export const projects: Project[] = [
@@ -69,5 +71,35 @@ export const projects: Project[] = [
     solution: "Eksperimentasi tabrakan asimetri ekstrem dengan palet warna mentah dan raksasa. Menghindari penghalus piksel modern guna menyajikan sebuah karya estetika jujur yang secara sengaja memberontak.",
     thumbnail: "/brutalism.jpg",
     gallery: ["/brutalism.jpg"]
+  },
+  {
+    id: "5",
+    slug: "perancangan-apk",
+    title: "Perancangan APK",
+    category: "UI/UX Design",
+    client: "Internal Project",
+    year: "2026",
+    role: "UI/UX Designer",
+    description: "Perancangan antarmuka aplikasi mobile dengan fokus pada alur pengguna yang jelas, visual yang bersih, serta konsistensi komponen untuk kebutuhan presentasi konsep produk digital.",
+    challenge: "Menyusun sistem tampilan yang sederhana namun tetap kuat secara hirarki visual agar pengguna mudah memahami fungsi utama aplikasi sejak interaksi pertama.",
+    solution: "Membangun struktur layout modular, tipografi yang tegas, serta kombinasi warna kontras terukur agar pengalaman navigasi terasa intuitif dan modern.",
+    thumbnail: "/perancangan-apk.jpeg",
+    gallery: ["/perancangan-apk.jpeg"]
+  },
+  {
+    id: "6",
+    slug: "pulang-tanpa-arah",
+    title: "Pulang Tanpa Arah",
+    category: "Short Film Project",
+    client: "YouTube Release",
+    year: "2026",
+    role: "Film Project",
+    description: "Proyek film berjudul Pulang Tanpa Arah yang dipublikasikan melalui YouTube dan dapat diputar langsung dari halaman detail portofolio.",
+    challenge: "Mengintegrasikan presentasi proyek film ke dalam website portofolio tanpa mengurangi konsistensi gaya visual antar proyek desain statis.",
+    solution: "Menambahkan dukungan embed video YouTube agar pengunjung dapat menonton film secara langsung dengan pengalaman yang tetap menyatu dengan layout portofolio.",
+    thumbnail: "https://img.youtube.com/vi/pn3zo16OktA/hqdefault.jpg",
+    gallery: ["https://img.youtube.com/vi/pn3zo16OktA/maxresdefault.jpg"],
+    videoEmbedUrl: "https://www.youtube.com/embed/pn3zo16OktA",
+    videoWatchUrl: "https://www.youtube.com/watch?v=pn3zo16OktA"
   }
 ]
