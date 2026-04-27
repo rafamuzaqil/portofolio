@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import React, { useRef } from 'react'
 import { AnimatedText } from '../components/ui/AnimatedText'
 import { MagneticButton } from '../components/ui/MagneticButton'
 import { ProjectCard } from '../components/ui/ProjectCard'
@@ -70,10 +70,10 @@ export default function Home() {
                 className="aspect-[4/5] w-full max-w-md mx-auto relative group overflow-hidden"
               >
                 <motion.img
-                  src="/profile.jpg"
+                  src="/rafa.jpeg"
                   alt="Potret"
-                  className="w-full h-[120%] -mt-[10%] object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700 origin-center"
-                  style={{ y: useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]) }}
+                  className="w-[150%] h-[150%] max-w-none -ml-[25%] object-cover object-top filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                  style={{ y: useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]) }}
                 />
               </motion.div>
             </div>
@@ -88,9 +88,11 @@ export default function Home() {
                 Membentuk yang sederhana menjadi bermakna.              </motion.h2>
               <div className="space-y-6 text-xl text-white/70 font-light leading-relaxed mb-12 max-w-3xl">
                 <p>
-                  Saya Rafa Muzaqil Mauludin, siswa SMK kelas 12 jurusan Desain Komunikasi Visual (DKV) yang berfokus pada pembuatan identitas visual dan desain digital. Saya tertarik pada branding, tata letak, serta bagaimana sebuah desain dapat menyampaikan pesan secara sederhana namun kuat.                </p>
+                  Saya Rafa Muzaqil Mauludin, Lulusan siswa SMK Komputer Indonesia jurusan Desain Komunikasi visual (DKV) dengan minat besar dalam pengembangan desain visual perancangan aplikasi dan editing video. Menguasai beberapa software desain seperti Adobe Photoshop, Adobe Illustrator, Adobe After Effects, Capcut dan Figma untuk membangun berbagai proyek digital. Memiliki dasar yang kuat dalam pengembangan desain serta kemampuan bahasa Inggris yang baik untuk memahami dokumentasi teknis dan berkomunikasi di bidang teknologi.
+                </p>
                 <p>
-                  Saya percaya desain yang baik adalah tentang menyederhanakan—menghilangkan hal yang tidak perlu hingga tersisa inti komunikasi. Saat ini saya terus mengembangkan kemampuan dan terbuka untuk pengalaman serta kolaborasi yang dapat memperluas perspektif dan kualitas karya saya.                </p>
+                  Saya percaya desain yang baik adalah tentang menyederhanakan—menghilangkan hal yang tidak perlu hingga tersisa inti komunikasi. Saat ini saya terus mengembangkan kemampuan dan terbuka untuk pengalaman serta kolaborasi yang dapat memperluas perspektif dan kualitas karya saya.
+                </p>
               </div>
 
               <div className="flex flex-wrap gap-4">
@@ -154,7 +156,7 @@ export default function Home() {
           </motion.h2>
 
           <form
-            onSubmit={(e) => {
+            onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
               e.preventDefault();
               const formData = new FormData(e.currentTarget);
               const subject = encodeURIComponent("Pesan Baru dari Portofolio Rafa");

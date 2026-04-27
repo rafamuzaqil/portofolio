@@ -87,19 +87,17 @@ export const projects: Project[] = [
     gallery: ["/perancangan-apk.jpeg"]
   },
   {
-    id: "6",
-    slug: "pulang-tanpa-arah",
-    title: "Pulang Tanpa Arah",
-    category: "Short Film Project",
-    client: "YouTube Release",
+    id: "7",
+    slug: "app-design-soekarno-hatta",
+    title: "App Design Soekarno Hatta",
+    category: "UI/UX Design",
+    client: "Personal Project",
     year: "2026",
-    role: "Film Project",
-    description: "Proyek film berjudul Pulang Tanpa Arah yang dipublikasikan melalui YouTube dan dapat diputar langsung dari halaman detail portofolio.",
-    challenge: "Mengintegrasikan presentasi proyek film ke dalam website portofolio tanpa mengurangi konsistensi gaya visual antar proyek desain statis.",
-    solution: "Menambahkan dukungan embed video YouTube agar pengunjung dapat menonton film secara langsung dengan pengalaman yang tetap menyatu dengan layout portofolio.",
-    thumbnail: "https://img.youtube.com/vi/pn3zo16OktA/hqdefault.jpg",
-    gallery: ["https://img.youtube.com/vi/pn3zo16OktA/maxresdefault.jpg"],
-    videoEmbedUrl: "https://www.youtube.com/embed/pn3zo16OktA",
-    videoWatchUrl: "https://www.youtube.com/watch?v=pn3zo16OktA"
+    role: "UI/UX Designer",
+    description: "Sistem informasi dan teknologi layanan tentang Bandara Soekarno Hatta.",
+    challenge: "Menyajikan informasi layanan bandara agar mudah diakses oleh pengguna melalui perangkat mobile.",
+    solution: "Merancang desain aplikasi yang bersih, modern, dan informatif untuk layanan bandara Soekarno Hatta.",
+    thumbnail: "/prjct.jpeg",
+    gallery: ["/prjct.jpeg"]
   }
 ]
